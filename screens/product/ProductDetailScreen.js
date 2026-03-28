@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native';
  
 const ProductDetailScreen = ({ navigation }) => {
-    return ( // Added return
+    return (  
         <View style={styles.container}>
             <Text>ProductDetailScreen</Text>
         </View>

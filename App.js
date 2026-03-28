@@ -9,5 +9,6 @@ const App = () => {
         </NavigationContainer>
     );
 }
+console.log("testing")
 
 export default App;
