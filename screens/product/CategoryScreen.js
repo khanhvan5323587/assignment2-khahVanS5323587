@@ -1,30 +1,29 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableOpacity, Button } from 'react-native';
+import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
+import { categories } from '../../src/constant/const';
+
 
 
 const CategoryScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-
             <View >
                 <Text style={styles.title}>Categories</Text>
             </View>
-
             <View style={styles.box}>
-                <TouchableOpacity onPress={() => navigation.navigate("ProductList")}>
-                    <Text style={styles.items}>Electronics</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("ProductList")}>
-                    <Text style={styles.items}>Jewelery</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("ProductList")}>
-                    <Text style={styles.items}>Men's Clothing</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate("ProductList")}>
-                    <Text style={styles.items}>Women's Clothing</Text>
-                </TouchableOpacity>
+                <FlatList
+                    data={categories}
+                    keyExtractor={(item, index) => index.toString()}
+                    renderItem={({ item }) => (
+                        <TouchableOpacity
+                            style={styles.itemTouchable}
+                            onPress={() => navigation.navigate("ProductList", { categoryName: item })}
+                        >
+                            <Text style={styles.items}>{item}</Text>
+                        </TouchableOpacity>
+                    )}
+                />
             </View>
-
         </View>
     )
 }
@@ -65,7 +64,7 @@ const styles = StyleSheet.create({
     items: {
         backgroundColor: '#2ac565',
         color: '#ffffff',
-        padding: 10,
+        padding: 15,
         margin: 10,
         textAlign: 'center',
         width: 300,
@@ -73,7 +72,8 @@ const styles = StyleSheet.create({
         borderColor: '#378920',
         borderRadius: 5,
         fontSize: 20,
-
-
+    },
+    itemTouchable: {
+        alignItems: 'center',
     }
 });
