@@ -30,6 +30,9 @@ const ProductListScreen = ({ navigation }) => {
       setLoading(false);
     }
   };
+  <View >
+    <Text style={styles.title}>Categories</Text>
+  </View>
 
   const renderProduct = ({ item }) => (
     <TouchableOpacity

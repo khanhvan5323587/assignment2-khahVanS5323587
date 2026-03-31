@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View, TouchableOpacity, FlatList } from 'react-native';
 import { categories } from '../../src/constant/const';
-
+import { global } from '../../src/constant/const';
 
 
 const CategoryScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
             <View >
-                <Text style={styles.title}>Categories</Text>
+                <Text style={global.title}>Categories</Text>
             </View>
             <View style={styles.box}>
                 <FlatList
@@ -36,40 +36,23 @@ const styles = StyleSheet.create({
         padding: 20
 
     },
-    title: {
-        // borderWidth: 1,
-        width: 370,
-        padding: 20,
-        margin: 10,
-        borderRadius: 5,
-        alignItems: 'center',
-        justifyContent: 'center',
-        alignSelf: 'center',
-        backgroundColor: '#14cfa3',
-        color: '#100909',
-        textAlign: 'center',
-        color: '#fff',
-        fontSize: 30
-
-    },
     box: {
         borderWidth: 1,
         padding: 10,
         borderRadius: 5,
         flex: 1,
         alignItems: 'center',
-        // borderBlockColor: '#56c37a'
-
+        borderBlockColor: '#56c37a'
     },
     items: {
-        backgroundColor: '#2ac565',
+        backgroundColor: '#2ac5b3',
         color: '#ffffff',
         padding: 15,
         margin: 10,
         textAlign: 'center',
         width: 300,
         borderWidth: 1,
-        borderColor: '#378920',
+        borderColor: '#208970',
         borderRadius: 5,
         fontSize: 20,
     },

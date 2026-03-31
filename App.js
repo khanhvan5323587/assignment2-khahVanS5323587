@@ -1,4 +1,4 @@
-import React from 'react'; // Added missing React import
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import ProductNavigator from "./src/navigators/ProductNavigation";
 
