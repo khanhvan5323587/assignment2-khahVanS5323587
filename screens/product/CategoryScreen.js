@@ -7,7 +7,7 @@ import { global } from '../../src/constant/const';
 const CategoryScreen = ({ navigation }) => {
     return (
         <View style={styles.container}>
-            <View >
+            <View style={global.header}>
                 <Text style={global.title}>Categories</Text>
             </View>
             <View style={styles.box}>
@@ -15,10 +15,7 @@ const CategoryScreen = ({ navigation }) => {
                     data={categories}
                     keyExtractor={(item, index) => index.toString()}
                     renderItem={({ item }) => (
-                        <TouchableOpacity
-                            style={styles.itemTouchable}
-                            onPress={() => navigation.navigate("ProductList", { categoryName: item })}
-                        >
+                        <TouchableOpacity style={styles.itemTouchable} onPress={() => navigation.navigate("ProductList", { categoryName: item })} >
                             <Text style={styles.items}>{item}</Text>
                         </TouchableOpacity>
                     )}
@@ -32,21 +29,17 @@ export default CategoryScreen
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#fff',
-        padding: 20
-
+        backgroundColor: '#f5f5f5',
     },
     box: {
-        borderWidth: 1,
-        padding: 10,
+        padding: 5,
         borderRadius: 5,
-        flex: 1,
+        // flex: 1,
         alignItems: 'center',
-        borderBlockColor: '#56c37a'
     },
     items: {
-        backgroundColor: '#2ac5b3',
-        color: '#ffffff',
+        backgroundColor: '#ffff',
+        color: '#14cfa3',
         padding: 15,
         margin: 10,
         textAlign: 'center',
@@ -55,6 +48,8 @@ const styles = StyleSheet.create({
         borderColor: '#208970',
         borderRadius: 5,
         fontSize: 20,
+        fontWeight: "bold"
+
     },
     itemTouchable: {
         alignItems: 'center',

@@ -4,10 +4,10 @@ import { StyleSheet } from "react-native";
 
 
 export const categories = [
-    'electronics',
-    'jewelery',
-    "men's clothing",
-    "women's clothing"
+    'Electronics',
+    'Jewelery',
+    "Men's clothing",
+    "Women's clothing"
 ];
 
 export const global = StyleSheet.create({
@@ -24,5 +24,10 @@ export const global = StyleSheet.create({
         textAlign: 'center',
         color: '#fff',
         fontSize: 25
-    }
+    },
+    header: {
+        paddingTop: 20,
+
+        backgroundColor: '#fff',
+    },
 })
